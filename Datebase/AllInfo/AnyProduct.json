@@ -1,0 +1,37 @@
+﻿[
+  {
+    "foodName": "Wrap",
+    "calories": 340,
+    "correctedTerm": "Grilled Chicken Cool Wrap",
+    "breakfastItem": true
+  },
+  {
+    "foodName": "Grilled Chicken Market Salad",
+    "calories": 470,
+    "sideItem": true,
+    "protein": "bean",
+    "dressingItem": true
+  },
+  {
+    "foodName": "Grilled Market Salad",
+    "foodType": "Salad",
+    "calories": 470,
+    "sideItem": true,
+    "dressingItem": true,
+    "carbs": 13,
+    "sodium": 590
+  },
+  {
+    "foodName": "Market Salad",
+    "foodType": "Salad",
+    "calories": 470,
+    "sideItem": true,
+    "dressingItem": true
+  },
+  {
+    "foodName": "Waffle Potato Fries",
+    "calories": 360,
+    "sideItem": true,
+    "ketchupItem": true
+  }
+]

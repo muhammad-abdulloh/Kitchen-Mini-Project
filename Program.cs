@@ -2,6 +2,7 @@
 using Kitchen_Mini_Project.Moduls;
 using Kitchen_Mini_Project.Registration;
 using Kitchen_Mini_Project.Repositories;
+using Kitchen_Mini_Project.Services;
 using System;
 using static System.Console;
 
@@ -23,7 +24,15 @@ namespace Kitchen_Mini_Project
                     if (choose == 1)
                     {
                         SignIn signIn = new SignIn();
-                        signIn.SignInUser();
+                        WriteLine("Input Login: ");
+                        string login = ReadLine();
+
+                        WriteLine("Input Password");
+                        string password = ReadLine();   
+                        signIn.SignInUser(login, password);
+
+                        ShowAllProducts.ShowProducts();
+
                         break;
                     }
                     else if (choose == 2)
@@ -32,6 +41,8 @@ namespace Kitchen_Mini_Project
                         IRepository  repository = new Repository();
                         User user = SignUp.SignUpUser();
                         repository.Create(user);
+                        Clear();
+                        WriteLine("Muvoffaqiyatli yakunlandi :)");
                         break;
                         
                     }

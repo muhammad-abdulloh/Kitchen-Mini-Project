@@ -7,27 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Datebase\Foods\Ichimliklar\NoSalqinIchimliklar\" />
-    <Folder Include="Datebase\Foods\Ichimliklar\SalqinIchimliklar\" />
-    <Folder Include="Datebase\Foods\Mevalar\SitrusMevalar\" />
-    <Folder Include="Datebase\Foods\Mevalar\XulMevalar\" />
-    <Folder Include="Datebase\Foods\Mevalar\QuruqMevalar\" />
-    <Folder Include="Datebase\Foods\Ziravorlar\" />
-    <Folder Include="Datebase\Foods\NonMaxsulotlari\" />
-    <Folder Include="Datebase\Foods\Salatlar\" />
-    <Folder Include="Datebase\Foods\Somsalar\" />
-    <Folder Include="Datebase\Foods\Qovurma\" />
-    <Folder Include="Datebase\Foods\Shirinliklar\" />
-    <Folder Include="Datebase\Foods\Parhez\" />
-    <Folder Include="Datebase\Foods\Quyuq\" />
-    <Folder Include="Datebase\Foods\Suyuq\" />
     <Folder Include="Datebase\Employes\" />
     <Folder Include="Datebase\SalaryEmployees\" />
     <Folder Include="Datebase\Products\BuyProducts\" />
     <Folder Include="Datebase\Products\LeftoverProducts\" />
     <Folder Include="Datebase\Products\SellProducts\" />
     <Folder Include="Datebase\UserDate\" />
-    <Folder Include="Datebase\Users\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetUz.Json" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>

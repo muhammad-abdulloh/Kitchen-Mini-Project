@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kitchen_Mini_Project.Moduls
 {
-    public  class Student
+    public class Restaurant
     {
-        public  int Id { get; set; }
-        public  string Name { get; }
-        public  string  MyProperty { get; set; }
+        string restaurant { get; set; }
+        
     }
 }

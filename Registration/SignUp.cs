@@ -21,10 +21,10 @@ namespace Kitchen_Mini_Project.Registration
                 {
                     var user = new User()
                     {
-                        FirstName = "Muhammadabdulloh",
-                        LastName = "Komilov",
-                        Login = "Komilov1",
-                        Password = "190675"
+                        FirstName = "Javohir",
+                        LastName = "Mamasoliyev",
+                        Login = "Binarsa.uz",
+                        Password = "2131"
                     };
                     return user;
                 }
