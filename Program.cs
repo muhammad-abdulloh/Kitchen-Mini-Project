@@ -23,16 +23,18 @@ namespace Kitchen_Mini_Project
                     int choose = int.Parse(ReadLine());
                     if (choose == 1)
                     {
-                        SignIn signIn = new SignIn();
+                        
                         WriteLine("Input Login: ");
                         string login = ReadLine();
 
                         WriteLine("Input Password");
-                        string password = ReadLine();   
-                        signIn.SignInUser(login, password);
+                        string password = ReadLine(); 
+                        
+                        SignIn.SignInUser(login, password);
+                        
+                        UserInfo userInfo = new UserInfo(login, password);
 
-                        ShowAllProducts.ShowProducts();
-
+                        userInfo.ShowUserInfo();
                         break;
                     }
                     else if (choose == 2)

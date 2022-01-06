@@ -19,13 +19,20 @@ namespace Kitchen_Mini_Project.Registration
             {
                 try
                 {
-                    var user = new User()
-                    {
-                        FirstName = "Javohir",
-                        LastName = "Mamasoliyev",
-                        Login = "Binarsa.uz",
-                        Password = "2131"
-                    };
+                    var user = new User();
+                    
+                    WriteLine("Input FirstName: ");
+                    user.FirstName = ReadLine();
+
+                    WriteLine("Input LastName: ");
+                    user.LastName = ReadLine();
+
+                    WriteLine("Input Login: ");
+                    user.Login = ReadLine();    
+
+                    WriteLine("Input Password: ");
+                    user.Password = ReadLine();
+
                     return user;
                 }
                 catch

@@ -15,7 +15,7 @@ namespace Kitchen_Mini_Project.Registration
     {
         
 
-        public User SignInUser(string login, string password)
+        public static User SignInUser(string login, string password)
         {
             string[] files = Directory.GetFiles(Constants.PathConst.UserDBPath);
 
@@ -28,7 +28,7 @@ namespace Kitchen_Mini_Project.Registration
 
                 if (login == userLogin && password == userPassword)
                 {
-                    WriteLine("Tugadi");
+                    
                     return new User
                     {
                         Id = Guid.Parse(userDetails[0]),

@@ -16,7 +16,7 @@ namespace Kitchen_Mini_Project.Moduls
         public string Login { get; set; }
         public string Password { get; set; }
 
-
+        public List<Products> Products { get; set; }  
         public override string ToString()
         {
             return $"{Id}\n{FirstName}\n{LastName}\n{Role}\n{Login}\n{Password}";
