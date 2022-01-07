@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,13 @@ namespace Kitchen_Mini_Project.Moduls
 {
     public class Restaurant
     {
-        string restaurant { get; set; }
+
+        [JsonProperty("restaurant")]
+        public string RestaurantName { get; set; }
+
+
+        [JsonProperty("foodItems")]
+        public IList<Products> FoodItems { get; set; }
         
     }
 }

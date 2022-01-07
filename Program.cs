@@ -12,6 +12,9 @@ namespace Kitchen_Mini_Project
     {
         static void Main(string[] args)
         {
+            
+
+            
             while (true)
             {
                 try
@@ -28,13 +31,18 @@ namespace Kitchen_Mini_Project
                         string login = ReadLine();
 
                         WriteLine("Input Password");
+                        ForegroundColor = ConsoleColor.Black;
                         string password = ReadLine(); 
+                        ForegroundColor = ConsoleColor.White;
                         
                         SignIn.SignInUser(login, password);
-                        
-                        UserInfo userInfo = new UserInfo(login, password);
 
-                        userInfo.ShowUserInfo();
+                        UserMenu.Menu();
+
+
+                        //UserInfo userInfo = new UserInfo(login, password);
+
+                        //userInfo.ShowUserInfo();
                         break;
                     }
                     else if (choose == 2)

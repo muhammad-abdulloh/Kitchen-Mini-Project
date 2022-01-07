@@ -30,14 +30,35 @@ namespace Kitchen_Mini_Project.Services
 
         }
 
-        public static void ChooseRestaurant()
+        public static void ChooseRestaurant(string restaurantName)
         {
-            WriteLine("Which restaurant you want to choose? ");
-            string choose = ReadLine();
+            string json = File.ReadAllText(PathConst.ProductDBPath);
 
+            IList<Products> products = JsonConvert.DeserializeObject<IList<Products>>(json);
+            IList<Restaurant> rests = JsonConvert.DeserializeObject<IList<Restaurant>>(json);
+            int i = 0;
+            foreach (Products product in products)
+            {
+                if (rests[i].RestaurantName.ToLower().Trim() == restaurantName)
+                {
+                    for (int j = 0; j < rests[i].FoodItems.Count; j++)
+                    {
+                        ForegroundColor = ConsoleColor.Green;
+                        WriteLine($"| {product.foodName} | {product.foodType} | {product.correctedTerm} | {product.calories}" +
+                            $" | {product.sideItem} | {product.dressingItem} | {product.protein} | {product.ketchupItem} | " +
+                            $"{product.breakfastItem} | {product.carbs} | {product.sodium}");
+                        ForegroundColor = ConsoleColor.White;
+                    }
 
+                }
+                i++;
+
+                
+            }
 
         }
+
+        
 
 
     }
