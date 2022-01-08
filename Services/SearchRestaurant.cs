@@ -8,5 +8,6 @@ namespace Kitchen_Mini_Project.Services
 {
     internal class SearchRestaurant
     {
+
     }
 }

@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Datebase\Employes\" />
-    <Folder Include="Datebase\SalaryEmployees\" />
     <Folder Include="Datebase\Products\BuyProducts\" />
     <Folder Include="Datebase\Products\LeftoverProducts\" />
     <Folder Include="Datebase\Products\SellProducts\" />

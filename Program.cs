@@ -12,32 +12,33 @@ namespace Kitchen_Mini_Project
     {
         static void Main(string[] args)
         {
-            
+            UserMenu.Menu();
 
+            /**
             
             while (true)
             {
                 try
                 {
-                    WriteLine("Registration:\n" +
-                              "| 1. SignIn | 2. SignUp |\n" +
-                              "input file: [1 or 2]");
+                //    WriteLine("Registration:\n" +
+                //              "| 1. SignIn | 2. SignUp |\n" +
+                //              "input file: [1 or 2]");
 
                     int choose = int.Parse(ReadLine());
                     if (choose == 1)
                     {
                         
-                        WriteLine("Input Login: ");
-                        string login = ReadLine();
+                        //WriteLine("Input Login: ");
+                        //string login = ReadLine();
 
-                        WriteLine("Input Password");
-                        ForegroundColor = ConsoleColor.Black;
-                        string password = ReadLine(); 
-                        ForegroundColor = ConsoleColor.White;
+                        //WriteLine("Input Password");
+                        //ForegroundColor = ConsoleColor.Black;
+                        //string password = ReadLine(); 
+                        //ForegroundColor = ConsoleColor.White;
                         
-                        SignIn.SignInUser(login, password);
+                        //SignIn.SignInUser(login, password);
 
-                        UserMenu.Menu();
+                        //UserMenu.Menu();
 
 
                         //UserInfo userInfo = new UserInfo(login, password);
@@ -70,7 +71,7 @@ namespace Kitchen_Mini_Project
                     continue;
                 }
             }
-         
+         */
         }
     }
 }

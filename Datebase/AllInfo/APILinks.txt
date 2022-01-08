@@ -1,0 +1,14 @@
+﻿food info API:
+https://raw.githubusercontent.com/zdrazil/kitchen-json/master/food-info.json
+
+https://github.com/zdrazil/kitchen-json
+
+
+// programmistlar
+https://gist.githubusercontent.com/rominirani/8235702/raw/a50f7c449c41b6dc8eb87d8d393eeff62121b392/employees.json
+
+
+
+// random userlar 
+// API dan ma'lumot kelyabdi
+https://randomuser.me/api/?results=12&format=json
