@@ -26,6 +26,8 @@ namespace Kitchen_Mini_Project.Registration
                 string userLogin = userDetails[4];
                 string userPassword = userDetails[5];
 
+                string role = UserRole.Admin.ToString();
+
                 if (login == userLogin && password == userPassword)
                 {   
                     

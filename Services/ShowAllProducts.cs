@@ -39,7 +39,7 @@ namespace Kitchen_Mini_Project.Services
             int i = 0;
             foreach (Products product in products)
             {
-                if (rests[i].RestaurantName.ToLower().Trim() == restaurantName)
+                if (rests[i].RestaurantName.ToLower().Trim() == restaurantName.ToLower().Trim())
                 {
                     for (int j = 0; j < rests[i].FoodItems.Count; j++)
                     {
