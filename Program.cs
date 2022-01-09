@@ -12,7 +12,11 @@ namespace Kitchen_Mini_Project
     {
         static void Main(string[] args)
         {
-            UserMenu.Menu();
+            //UserMenu.Menu();
+
+
+            Update.UpdateAnyProduct();
+
 
             /**
             
