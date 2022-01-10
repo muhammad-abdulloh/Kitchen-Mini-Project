@@ -42,6 +42,8 @@ namespace Kitchen_Mini_Project.Services
 
             if (choose == 1)
             {
+                Clear();
+
                 ForegroundColor = ConsoleColor.Green;
                 WriteLine("From which restaurant you want to buy?\n");
 
@@ -65,16 +67,19 @@ namespace Kitchen_Mini_Project.Services
             }
             else if (choose == 2)
             {
+                Clear();
                 ShowAllProducts.ShowProducts();
                 Menu();
             }
             else if (choose == 3)
             {
+                Clear();
                 WriteLine("Ma'lumotlar sir To'ylarda gaplashamiz :) ");
                 Menu();
             }
             else if (choose == 4)
             {
+                Clear();
                 WriteLine("Update qilishdan oldin oldingi ma'lumotlarni ko'rib olasizmi yoki yo'qmi [y/n]");
 
                 string chooseUpdate = ReadLine().Trim().ToLower();
@@ -97,21 +102,25 @@ namespace Kitchen_Mini_Project.Services
             }
             else if (choose == 5)
             {
+                Clear();
                 ShowAllProducts.ShowProducts();
                 Menu();
             }
             else if (choose == 6)
             {
+                Clear();
                 AdminMenu.Employees();
                 Menu();
             }
             else if (choose == 7)
             {
+                Clear();
                 SearchRestaurant.SearchAll();
                 Menu();
             }
             else if (choose == 8)
             {
+                Clear();
                 ForegroundColor = ConsoleColor.Green;
                 Write("Exit");
             }
