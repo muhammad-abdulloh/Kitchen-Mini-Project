@@ -12,70 +12,59 @@ namespace Kitchen_Mini_Project
     {
         static void Main(string[] args)
         {
-            AdminMenu.Employees();
-
-            //SearchRestaurant.SearchAll();
 
 
-            //UserMenu.Menu();
+            while (true)
+            {
+                try
+                {
+                    WriteLine("Registration:\n" +
+                              "| 1. SignIn | 2. SignUp |\n" +
+                              "input file: [1 or 2]");
+
+                    int choose = int.Parse(ReadLine().Trim());
+                    if (choose == 1)
+                    {
+
+                        WriteLine("Input Login: ");
+                        string login = ReadLine();
+
+                        WriteLine("Input Password");
+                        ForegroundColor = ConsoleColor.Black;
+                        string password = ReadLine();
+                        ForegroundColor = ConsoleColor.White;
+
+                        SignIn.SignInUser(login, password);
+
+                        UserMenu.Menu();
 
 
-            ////Update.UpdateAnyProduct();
+                        //UserInfo userInfo = new UserInfo(login, password);
+
+                        //userInfo.ShowUserInfo();
+                        break;
+                    }
+                    else if (choose == 2)
+                    {
+
+                        IRepository repository = new Repository();
+                        User user = SignUp.SignUpUser();
+                        repository.Create(user);
+                        Clear();
+
+                        ForegroundColor = ConsoleColor.Blue;
+                        WriteLine("Muvoffaqiyatli yakunlandi :)");
 
 
-            //ShowAllProducts.ShowProducts();
+                    }
 
-            //while (true)
-            //{
-            //    try
-            //    {
-            //        WriteLine("Registration:\n" +
-            //                  "| 1. SignIn | 2. SignUp |\n" +
-            //                  "input file: [1 or 2]");
-
-            //        int choose = int.Parse(ReadLine().Trim());
-            //        if (choose == 1)
-            //        {
-
-            //            WriteLine("Input Login: ");
-            //            string login = ReadLine();
-
-            //            WriteLine("Input Password");
-            //            ForegroundColor = ConsoleColor.Black;
-            //            string password = ReadLine();
-            //            ForegroundColor = ConsoleColor.White;
-
-            //            SignIn.SignInUser(login, password);
-
-            //            UserMenu.Menu();
-
-
-            //            //UserInfo userInfo = new UserInfo(login, password);
-
-            //            //userInfo.ShowUserInfo();
-            //            break;
-            //        }
-            //        else if (choose == 2)
-            //        {
-
-            //            IRepository repository = new Repository();
-            //            User user = SignUp.SignUpUser();
-            //            repository.Create(user);
-            //            Clear();
-
-            //            ForegroundColor= ConsoleColor.Blue;
-            //            WriteLine("Muvoffaqiyatli yakunlandi :)");
-                        
-
-            //        }
-                    
-            //    }
-            //    catch
-            //    {
-            //        Clear();
-            //        continue;
-            //    }
-            //}
+                }
+                catch
+                {
+                    Clear();
+                    continue;
+                }
+            }
 
         }
     }

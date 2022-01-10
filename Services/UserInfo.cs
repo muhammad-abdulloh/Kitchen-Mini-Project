@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 
 namespace Kitchen_Mini_Project.Services
 {
-    internal class UserInfo
+    public class UserInfo
     {
         private readonly string _login;
         private readonly string _password;
+
+        public UserInfo()
+        {
+        }
 
         public UserInfo(string login, string password)
         {

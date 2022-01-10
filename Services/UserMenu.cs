@@ -1,5 +1,6 @@
 ﻿using Kitchen_Mini_Project.Constants;
 using Kitchen_Mini_Project.Moduls;
+using Kitchen_Mini_Project.Registration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,11 @@ namespace Kitchen_Mini_Project.Services
         // Boshidagi menu
         public static void Menu()
         {
-            Clear();
+            
 
             ForegroundColor = ConsoleColor.Green;
             WriteLine("Menu: ");
-            Write("| 1. Do you want to buy meal? | " +
+            Write("| 1. From which restaurant's foods you want ? | " +
                 "| 2. Show the all date | " +
                 "3. Show user info |");
 
@@ -32,7 +33,7 @@ namespace Kitchen_Mini_Project.Services
 
             ForegroundColor = ConsoleColor.DarkYellow;
 
-            Write(" 6. Exit |\n\n");
+            Write(" 6. Employees Info | 7. Luboy narsani qidirish ha ha :) | 8. Exit |\n\n");
             ForegroundColor= ConsoleColor.Green;
             Write(">>> ");
 
@@ -57,12 +58,20 @@ namespace Kitchen_Mini_Project.Services
 
                 ForegroundColor = ConsoleColor.White;
                 ShowAllProducts.ChooseRestaurant(restaurant);
+                
+                
+                Menu();
 
-
+            }
+            else if (choose == 2)
+            {
+                ShowAllProducts.ShowProducts();
+                Menu();
             }
             else if (choose == 3)
             {
-                ShowAllProducts.ShowProducts();
+                WriteLine("Ma'lumotlar sir To'ylarda gaplashamiz :) ");
+                Menu();
             }
             else if (choose == 4)
             {
@@ -84,13 +93,26 @@ namespace Kitchen_Mini_Project.Services
                     Update.UpdateAnyProduct();
                 }
                 
+                Menu();
             }
             else if (choose == 5)
             {
                 ShowAllProducts.ShowProducts();
+                Menu();
             }
             else if (choose == 6)
             {
+                AdminMenu.Employees();
+                Menu();
+            }
+            else if (choose == 7)
+            {
+                SearchRestaurant.SearchAll();
+                Menu();
+            }
+            else if (choose == 8)
+            {
+                ForegroundColor = ConsoleColor.Green;
                 Write("Exit");
             }
 
