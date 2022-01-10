@@ -10,47 +10,47 @@ namespace Kitchen_Mini_Project.Moduls
     public class Products
     {
         [JsonProperty("foodName")]
-        public string foodName { get; set; }
+        public string? foodName { get; set; }
 
 
         [JsonProperty("foodType")]
-        public string foodType { get; set; }
+        public string? foodType { get; set; }
 
 
         [JsonProperty("correctedTerm")]
-        public string correctedTerm { get; set; }
+        public string? correctedTerm { get; set; }
 
 
         [JsonProperty("calories")]
-        public int calories { get; set; }
+        public int? calories { get; set; }
 
 
         [JsonProperty("sideItem")]
-        public bool sideItem { get; set; }
+        public bool? sideItem { get; set; }
 
 
         [JsonProperty("dressingItem")]
-        public bool dressingItem { get; set; }
+        public bool? dressingItem { get; set; }
 
 
         [JsonProperty("protein")]
-        public string protein { get; set; }
+        public string? protein { get; set; }
 
 
         [JsonProperty("ketchupItem")]
-        public bool ketchupItem { get; set; }
+        public bool? ketchupItem { get; set; }
 
 
         [JsonProperty("breakfastItem")]
-        public bool breakfastItem { get; set; }
+        public bool? breakfastItem { get; set; }
 
 
         [JsonProperty("carbs")]
-        public int carbs { get; set; }
+        public int? carbs { get; set; }
 
 
         [JsonProperty("sodium")]
-        public int sodium { get; set; }
+        public int? sodium { get; set; }
         
     }
 }
