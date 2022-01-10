@@ -13,7 +13,6 @@ namespace Kitchen_Mini_Project.Registration
 {
     public class SignIn
     {
-        
 
         public static User SignInUser(string login, string password)
         {

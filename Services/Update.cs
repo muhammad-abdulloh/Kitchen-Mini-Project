@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Kitchen_Mini_Project.Services
 {
@@ -18,11 +19,20 @@ namespace Kitchen_Mini_Project.Services
 
             IList<Restaurant> products = JsonConvert.DeserializeObject<IList<Restaurant>>(readdedFile);
 
-            foreach (var product in products[0].FoodItems)
+
+            WriteLine("Entering old Food: ");
+            string oldFood = ReadLine();
+
+            WriteLine("Entering new Food: ");
+            string  newFood = ReadLine();
+            foreach (var product in products)
             {
-                if (product.foodName == "Chicken Burrito")
+               foreach (var item in product.FoodItems)
                 {
-                    product.foodName = "Chicken Burrito is Update ha ha";
+                    if (item.foodName == oldFood)
+                    {
+                        item.foodName = newFood;
+                    }                    
                 }
             }
 

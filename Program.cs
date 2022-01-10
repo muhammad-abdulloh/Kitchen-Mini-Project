@@ -13,17 +13,7 @@ namespace Kitchen_Mini_Project
         static void Main(string[] args)
         {
 
-
-
-
-
-
-
-
-
-            SearchRestaurant.SearchAll();
-
-
+            //SearchRestaurant.SearchAll();
 
 
             //UserMenu.Menu();
@@ -32,64 +22,66 @@ namespace Kitchen_Mini_Project
             ////Update.UpdateAnyProduct();
 
 
-            
-            
-            //while (true)
-            //{
-            //    try
-            //    {
-            //        WriteLine("Registration:\n" +
-            //                  "| 1. SignIn | 2. SignUp |\n" +
-            //                  "input file: [1 or 2]");
+            //ShowAllProducts.ShowProducts();
 
-            //        int choose = int.Parse(ReadLine().Trim());
-            //        if (choose == 1)
-            //        {
+            while (true)
+            {
+                try
+                {
+                    WriteLine("Registration:\n" +
+                              "| 1. SignIn | 2. SignUp |\n" +
+                              "input file: [1 or 2]");
 
-            //            WriteLine("Input Login: ");
-            //            string login = ReadLine();
+                    int choose = int.Parse(ReadLine().Trim());
+                    if (choose == 1)
+                    {
 
-            //            WriteLine("Input Password");
-            //            ForegroundColor = ConsoleColor.Black;
-            //            string password = ReadLine();
-            //            ForegroundColor = ConsoleColor.White;
+                        WriteLine("Input Login: ");
+                        string login = ReadLine();
 
-            //            SignIn.SignInUser(login, password);
+                        WriteLine("Input Password");
+                        ForegroundColor = ConsoleColor.Black;
+                        string password = ReadLine();
+                        ForegroundColor = ConsoleColor.White;
 
-            //            UserMenu.Menu();
+                        SignIn.SignInUser(login, password);
+
+                        UserMenu.Menu();
 
 
-            //            UserInfo userInfo = new UserInfo(login, password);
+                        //UserInfo userInfo = new UserInfo(login, password);
 
-            //            userInfo.ShowUserInfo();
-            //            break;
-            //        }
-            //        else if (choose == 2)
-            //        {
-                        
-            //            IRepository  repository = new Repository();
-            //            User user = SignUp.SignUpUser();
-            //            repository.Create(user);
-            //            Clear();
-            //            WriteLine("Muvoffaqiyatli yakunlandi :)");
-            //            break;
-                        
-            //        }
-            //        else
-            //        {
-            //            Clear();
-            //            WriteLine("Bunday foydalanuvchi mavjud emas");
-                        
-            //            break;
-            //        }
-            //    }
-            //    catch
-            //    {
-            //        Clear();
-            //        continue;
-            //    }
-            //}
-         
+                        //userInfo.ShowUserInfo();
+                        break;
+                    }
+                    else if (choose == 2)
+                    {
+
+                        IRepository repository = new Repository();
+                        User user = SignUp.SignUpUser();
+                        repository.Create(user);
+                        Clear();
+
+                        ForegroundColor= ConsoleColor.Blue;
+                        WriteLine("Muvoffaqiyatli yakunlandi :)");
+                        break;
+
+                    }
+                    else
+                    {
+                        Clear();
+                        WriteLine("Bunday foydalanuvchi mavjud emas");
+
+                        break;
+                    }
+                }
+                catch
+                {
+                    Clear();
+                    continue;
+                }
+            }
+
         }
     }
 }
