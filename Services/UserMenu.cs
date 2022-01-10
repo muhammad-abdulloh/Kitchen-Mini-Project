@@ -91,7 +91,7 @@ namespace Kitchen_Mini_Project.Services
             }
             else if (choose == 6)
             {
-                ShowAllProducts.ShowProducts();
+                Write("Exit");
             }
 
         }

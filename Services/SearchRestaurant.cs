@@ -17,13 +17,14 @@ namespace Kitchen_Mini_Project.Services
         public static void SearchAll()
         {
             WriteLine("Write anything: ");
+            Write(">>> ");
             string entering = ReadLine();
 
             string json = File.ReadAllText(PathConst.ProductDBPath);
 
             List<Products> products = JsonConvert.DeserializeObject<List<Products>>(json);
             List<Restaurant> rests = JsonConvert.DeserializeObject <List<Restaurant>> (json);
-            int i = 0;
+            
             foreach (Restaurant res in rests)
             {
                 if (res.RestaurantName.ToLower().Contains(entering.ToLower().Trim()))
