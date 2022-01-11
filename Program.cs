@@ -12,8 +12,7 @@ namespace Kitchen_Mini_Project
     {
         static void Main(string[] args)
         {
-
-
+            Repository repo = new Repository();
             while (true)
             {
                 try
@@ -34,7 +33,7 @@ namespace Kitchen_Mini_Project
                         string password = ReadLine();
                         ForegroundColor = ConsoleColor.White;
 
-                        SignIn.SignInUser(login, password);
+                        repo.SignInUser(login, password);
 
                         UserMenu.Menu();
 
@@ -48,16 +47,13 @@ namespace Kitchen_Mini_Project
                     {
 
                         IRepository repository = new Repository();
-                        User user = SignUp.SignUpUser();
+                        User user = repo.SignUpUser();
                         repository.Create(user);
                         Clear();
 
                         ForegroundColor = ConsoleColor.Blue;
                         WriteLine("Muvoffaqiyatli yakunlandi :)");
-
-
                     }
-
                 }
                 catch
                 {

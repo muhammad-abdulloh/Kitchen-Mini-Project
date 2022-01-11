@@ -11,8 +11,6 @@ namespace Kitchen_Mini_Project.Enums
         Admin,
         User
     }
-
-
     public static class UserRoleExtensions
     {
          

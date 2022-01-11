@@ -11,7 +11,7 @@ namespace Kitchen_Mini_Project.Moduls
     {
 
         [JsonProperty("restaurant")]
-        public string? RestaurantName { get; set; }
+        public string RestaurantName { get; set; }
 
 
         [JsonProperty("foodItems")]

@@ -10,14 +10,14 @@ namespace Kitchen_Mini_Project.Moduls
     public class Products
     {
         [JsonProperty("foodName")]
-        public string? foodName { get; set; }
+        public string foodName { get; set; }
 
         [JsonProperty("foodType")]
-        public string? foodType { get; set; }
+        public string foodType { get; set; }
 
 
         [JsonProperty("correctedTerm")]
-        public string? correctedTerm { get; set; }
+        public string correctedTerm { get; set; }
 
 
         [JsonProperty("calories")]
@@ -33,7 +33,7 @@ namespace Kitchen_Mini_Project.Moduls
 
 
         [JsonProperty("protein")]
-        public string? protein { get; set; }
+        public string protein { get; set; } 
 
 
         [JsonProperty("ketchupItem")]

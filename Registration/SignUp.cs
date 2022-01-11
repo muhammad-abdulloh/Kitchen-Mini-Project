@@ -13,35 +13,10 @@ namespace Kitchen_Mini_Project.Registration
 {
     public class SignUp
     {
-        public static User SignUpUser()
-        {
-            while (true)
-            {
-                try
-                {
-                    var user = new User();
-                    
-                    WriteLine("Input FirstName: ");
-                    user.FirstName = ReadLine();
-
-                    WriteLine("Input LastName: ");
-                    user.LastName = ReadLine();
-
-                    WriteLine("Input Login: ");
-                    user.Login = ReadLine();    
-
-                    WriteLine("Input Password: ");
-                    user.Password = ReadLine();
-
-                    return user;
-                }
-                catch
-                {
-                    WriteLine("Qandaydur hatolik ketdi boshqatdan kiriting: ");
-                    continue;
-                }
-            }
-        }
+        //public static User SignUpUser()
+        //{
+            
+        //}
         
     }
 }

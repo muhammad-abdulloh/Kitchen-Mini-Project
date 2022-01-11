@@ -1,5 +1,6 @@
 ﻿using Kitchen_Mini_Project.Moduls;
 using Kitchen_Mini_Project.Registration;
+using Kitchen_Mini_Project.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Kitchen_Mini_Project.Services
     {
         private readonly string _login;
         private readonly string _password;
+        Repository repo = new Repository();
 
         public UserInfo()
         {
@@ -26,7 +28,7 @@ namespace Kitchen_Mini_Project.Services
         {
             User user = new User();
             
-            user = SignIn.SignInUser(_login, _password);
+            user = repo.SignInUser(_login, _password);
 
             Console.WriteLine("Firstname: " + user.FirstName);
             Console.WriteLine("Lastname: " + user.LastName);
